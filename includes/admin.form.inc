@@ -15,6 +15,13 @@ function islandora_gsearcher_settings_form(array $form, array &$form_state) {
     '#description' => t('Endpoint to use when communicating with GSearch.'),
     '#default_value' => variable_get('islandora_gsearcher_gsearch_url', 'localhost:8080/fedoragsearch/rest'),
   );
+  $form['islandora_gsearcher_gsearch_core'] = array(
+    '#type' => 'textfield',
+    '#required' => TRUE,
+    '#title' => t('GSearch Solr Core'),
+    '#description' => t('Core to select when communicating with GSearch.'),
+    '#default_value' => variable_get('islandora_gsearcher_gsearch_core', 'islandora'),
+  );
   $form['islandora_gsearcher_gsearch_user'] = array(
     '#type' => 'textfield',
     '#required' => TRUE,
